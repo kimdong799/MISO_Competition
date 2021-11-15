@@ -5,5 +5,5 @@ Management Information System Competition MJU X DKU X KMU
 
 ### MZ세대를 겨냥한 초개인화 경영전략
 - RFM 분석을 통한 성장가능산업 도출
-- 텍스트 데이텁 분석을 통한 위험요소 정의
+- 텍스트 데이터 분석을 통한 위험요소 정의
 - 추천시스템 구현을 통한 사양산업 개선전략 제시

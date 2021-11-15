@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- font -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumGarMaesGeur.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+    <!-- reset.css -->
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <!-- loader.csvv -->
+    <link rel="stylesheet" href="../static/css/loader.css">
+    <!-- fontawesome kitcode -->
+    <script src="https://kit.fontawesome.com/ee207e1a20.js" crossorigin="anonymous"></script>
+</head>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<body>
+    <!-- 로딩바 -->
+    <div class="loader"></div>
+
+    <!-- 레이아웃 전체 Section -->
+    <section class="FixedComponent_container">
+        <!-- navbar header -->
+        <nav class="nav_bar">
+            <div class="navbar__logo">
+                <i class="fas fa-baby"></i>
+                <a href="">뭐입힐겨?</a>
+            </div>
+            <div class="navbar__title">
+                <ul>
+                <li><a href="">오늘</a></li>
+                <li><a href="" id="random_destination" class="random_start">뭐</a></li>
+                <li><a href="">입힐겨?</a></li>
+                </ul>
+            </div>
+            <div class="navbar__links">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square"></i>
+            </div>
+        </nav>
+        <!-- navbar header -->
+    <!-- Home_container -->
+    <div class="Reccommend_ment">
+        혹시 이게 필요하신가요? 💡
+    </div>
+    <section class="Home_container">
+
+        {% for i, j, k, l in recommend_list['상품명']|zip(recommend_list['이미지링크'],recommend_list['할인가'], recommend_list['유사도']) %}
+        <div class="Recommend_item">
+            <div class="Recommend_index_container">
+                <p id={{ loop.index0 + 1 }} class="item_num"> {{ loop.index }}</p>
+                <a href="" class="Recommend_prob">
+                    매칭확률 {{ l*100 }}%
+                </a>
+            </div>
+            <img src="{{ j }}" alt=""><br>
+            <br>
+            <a href="" class="product_name">
+                {{ i }}
+            </a><br>
+            <a href="" class="product_price">
+                할인가 : {{ k }}
+            </a>
+        </div>
+        {% endfor %}
+
+    </section>
+    </section>
+    <!-- 레이아웃 전체 Section -->
+    <script>
+        $(window).on('load', function () {
+            $('.loader').delay(500).fadeOut();
+        });
+
+    </script>
+    <!-- menu_swiper.js -->
+    <script type="text/javascript" src="/static/js/menu_swiper.js"></script>
+</body>
+</html>

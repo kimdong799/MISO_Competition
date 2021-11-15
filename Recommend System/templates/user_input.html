@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- font -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumGarMaesGeur.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+    <!-- reset.css -->
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <!-- fontawesome kitcode -->
+    <script src="https://kit.fontawesome.com/ee207e1a20.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 레이아웃 전체 Section -->
+    <section class="FixedComponent_container">
+        <!-- navbar header -->
+        <nav class="nav_bar">
+            <div class="navbar__logo">
+                <i class="fas fa-baby"></i>
+                <a href="">뭐입힐겨?</a>
+            </div>
+            <div class="navbar__title">
+                <ul>
+                <li><a href="">오늘</a></li>
+                <li><a href="" id="random_destination" class="random_start">뭐</a></li>
+                <li><a href="">입힐겨?</a></li>
+                </ul>
+            </div>
+            <div class="navbar__links">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square"></i>
+            </div>
+        </nav>        
+        <!-- navbar header -->
+        <div class="Reccommend_ment">
+            고객님의 취향을 선택해주세요😊
+        </div>
+        
+        <!-- user input -->
+        <section class="user_input">
+            <form action="/" method="post" class=""prefer_type>
+                <div class="ask_prefer_region">
+                    아이의 성별을 알려주세요!
+                </div>
+                <div class="prefer_region">
+                    <input type="text" name="sex", list="sexlist">
+                    <datalist id="sexlist">
+                        <option value="공용"></option>
+                        <option value="남"></option>
+                        <option value="여"></option>
+                    </datalist>
+                </div>
+                <div class="ask_prefer_region">
+                    어떤 카테고리를 찾으시나요?
+                </div>
+                <div class="prefer_region">
+                    <input type="text" name="cat", list="catlist">
+                    <datalist id="catlist">
+                        <option value="맨투맨"></option>
+                        <option value="자켓"></option>
+                        <option value="원피스"></option>
+                        <option value="트레이닝복"></option>
+                        <option value="내의"></option>
+                        <option value="후드티"></option>
+                        <option value="플리스"></option>
+                        <option value="티셔츠"></option>
+                        <option value="수면조끼"></option>
+                        <option value="패딩"></option>
+                        <option value="면바지"></option>
+                    </datalist>
+                </div>
+                <div class="ask_prefer_region">
+                    어떤 용도로 구매하시나요?
+                </div>
+                <div class="prefer_region">
+                    <input type="text" name="usage", list="usagelist">
+                    <datalist id="usagelist">
+                        <option value="일상복"></option>
+                        <option value="소풍준비"></option>
+                        <option value="운동복"></option>
+                        <option value="잠옷"></option>
+                        <option value="등원복"></option>
+                    </datalist>
+                </div>
+                <div class="submit_container">
+                    <input type='submit' value="추천 아이템 검색" class="button">
+                </div>
+            </form>
+            
+        </section>
+    
+        <!-- user input -->
+    </section>
+    <!-- 레이아웃 전체 Section -->
+    <!-- menu_swiper.js -->
+    <script type="text/javascript" src="../static/js/click.js"></script>
+    <script type="text/javascript" src="../static/js/menu_swiper.js"></script>
+</body>
+</html>
